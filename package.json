@@ -1,9 +1,9 @@
 {
   "name": "superpowers",
   "version": "1.0.0",
-  "description": "",
-  "main": "SupCore.js",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Somet1mes/superpowers/issues"
   },
-  "homepage": "https://github.com/Somet1mes/superpowers#readme"
+  "homepage": "https://github.com/Somet1mes/superpowers#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "description": ""
 }
