@@ -7,6 +7,48 @@
       "type": "script"
     },
     {
+      "id": "17",
+      "name": "Helicopter",
+      "type": null,
+      "children": [
+        {
+          "id": "16",
+          "name": "fuelBar",
+          "type": "sprite"
+        },
+        {
+          "id": "11",
+          "name": "Helicopter1",
+          "type": "sprite"
+        },
+        {
+          "id": "18",
+          "name": "fuelBarBehavior",
+          "type": "script"
+        },
+        {
+          "id": "24",
+          "name": "powerBarBehavior",
+          "type": "script"
+        },
+        {
+          "id": "19",
+          "name": "fuelBarBar",
+          "type": "sprite"
+        },
+        {
+          "id": "22",
+          "name": "powerBar",
+          "type": "sprite"
+        },
+        {
+          "id": "23",
+          "name": "powerBarBar",
+          "type": "sprite"
+        }
+      ]
+    },
+    {
       "id": "3",
       "name": "IWorldObject",
       "type": "script"
@@ -32,6 +74,33 @@
       "type": "script"
     },
     {
+      "id": "14",
+      "name": "MenuStuff",
+      "type": null,
+      "children": [
+        {
+          "id": "20",
+          "name": "IClickable",
+          "type": "script"
+        },
+        {
+          "id": "12",
+          "name": "Menu",
+          "type": "script"
+        },
+        {
+          "id": "21",
+          "name": "ContinueButtonBehavior",
+          "type": "script"
+        },
+        {
+          "id": "13",
+          "name": "Menu2",
+          "type": "sprite"
+        }
+      ]
+    },
+    {
       "id": "7",
       "name": "Wolrd",
       "type": "script"
@@ -52,13 +121,13 @@
       "type": "scene"
     },
     {
-      "id": "6",
-      "name": "Leonard",
-      "type": "sprite"
+      "id": "15",
+      "name": "font1",
+      "type": "font"
     },
     {
-      "id": "11",
-      "name": "Helicopter1",
+      "id": "6",
+      "name": "Leonard",
       "type": "sprite"
     }
   ]

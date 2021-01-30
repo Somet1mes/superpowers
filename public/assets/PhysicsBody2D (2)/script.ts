@@ -65,6 +65,12 @@ class PhysicsBody2D {
     this.velocity.y = y;
   }
   
+  SetPosition(x, y)
+  {
+    this.position.x = x;
+    this.position.y = y;
+  }
+  
   NullForces()
   {
     this.acceleration.x = 0;

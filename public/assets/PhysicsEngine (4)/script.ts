@@ -49,7 +49,6 @@ class PhysicsEngine {
             let ratio = distance / (body.GetRaduis() + body2.GetRaduis());
             if (ratio < 1)
               {
-                Sup.log("collided");
                 body.NullForcesInDirection((body2.GetPosition().x - body.GetPosition().x), (body2.GetPosition().y - body.GetPosition().y));
                 let rejectionVelocity = (1 - ratio) * this.maxRejectionVelocity;
                 if (Math.abs((body2.GetPosition().x - body.GetPosition().x)) > Math.abs((body2.GetPosition().y - body.GetPosition().y)))
