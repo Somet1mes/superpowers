@@ -1,0 +1,65 @@
+{
+  "name": "sometimesggj",
+  "assets": [
+    {
+      "id": "2",
+      "name": "PhysicsBody2D",
+      "type": "script"
+    },
+    {
+      "id": "3",
+      "name": "IWorldObject",
+      "type": "script"
+    },
+    {
+      "id": "1",
+      "name": "PlayerVehicle",
+      "type": "script"
+    },
+    {
+      "id": "8",
+      "name": "Terrain",
+      "type": "script"
+    },
+    {
+      "id": "10",
+      "name": "GroundFactory",
+      "type": "script"
+    },
+    {
+      "id": "4",
+      "name": "PhysicsEngine",
+      "type": "script"
+    },
+    {
+      "id": "7",
+      "name": "Wolrd",
+      "type": "script"
+    },
+    {
+      "id": "0",
+      "name": "Main",
+      "type": "script"
+    },
+    {
+      "id": "9",
+      "name": "Ground1",
+      "type": "sprite"
+    },
+    {
+      "id": "5",
+      "name": "GameScene",
+      "type": "scene"
+    },
+    {
+      "id": "6",
+      "name": "Leonard",
+      "type": "sprite"
+    },
+    {
+      "id": "11",
+      "name": "Helicopter1",
+      "type": "sprite"
+    }
+  ]
+}
