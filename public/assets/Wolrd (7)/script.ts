@@ -12,8 +12,6 @@ class WolrdBehavior extends Sup.Behavior {
   width = 1500;
   height = 500;
   
-  time = 0;
-  
   day = 0;
   currentMoney = 0;
   lostPeopleEnslaved = 0;
@@ -50,11 +48,10 @@ class WolrdBehavior extends Sup.Behavior {
   }
 
   update() {
-    if (this.time > 60 *20)
+    if (Sup.Input.wasMouseButtonJustReleased(0))
       {
         this.textActor.setVisible(false);
       }
-    this.time++;
     
     this.cameraManActor.setPosition(this.player.GetPosition().x,this.player.GetPosition().y,50);
     this.menuActor.setPosition(this.player.GetPosition().x,this.player.GetPosition().y,1);
