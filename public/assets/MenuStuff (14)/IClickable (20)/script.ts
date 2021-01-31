@@ -1,4 +1,0 @@
-interface IClickable
-  {
-    OnClick()
-  }

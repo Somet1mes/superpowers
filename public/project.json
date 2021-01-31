@@ -54,9 +54,88 @@
       "type": "script"
     },
     {
+      "id": "14",
+      "name": "MenuStuff",
+      "type": null,
+      "children": [
+        {
+          "id": "12",
+          "name": "Menu",
+          "type": "script"
+        },
+        {
+          "id": "13",
+          "name": "Menu2",
+          "type": "sprite"
+        }
+      ]
+    },
+    {
       "id": "1",
       "name": "PlayerVehicle",
       "type": "script"
+    },
+    {
+      "id": "26",
+      "name": "LostPerson",
+      "type": "script"
+    },
+    {
+      "id": "27",
+      "name": "persons",
+      "type": null,
+      "children": [
+        {
+          "id": "28",
+          "name": "lostPerson1",
+          "type": "sprite"
+        },
+        {
+          "id": "30",
+          "name": "lostPerson2",
+          "type": "sprite"
+        },
+        {
+          "id": "31",
+          "name": "lostPerson3",
+          "type": "sprite"
+        },
+        {
+          "id": "32",
+          "name": "lostPerson4",
+          "type": "sprite"
+        },
+        {
+          "id": "33",
+          "name": "lostPerson5",
+          "type": "sprite"
+        },
+        {
+          "id": "34",
+          "name": "lostPerson6",
+          "type": "sprite"
+        },
+        {
+          "id": "36",
+          "name": "lostPerson7",
+          "type": "sprite"
+        },
+        {
+          "id": "37",
+          "name": "lostPerson8",
+          "type": "sprite"
+        },
+        {
+          "id": "38",
+          "name": "lostPerson9",
+          "type": "sprite"
+        },
+        {
+          "id": "39",
+          "name": "PersonFactory",
+          "type": "script"
+        }
+      ]
     },
     {
       "id": "8",
@@ -74,36 +153,19 @@
       "type": "script"
     },
     {
-      "id": "14",
-      "name": "MenuStuff",
-      "type": null,
-      "children": [
-        {
-          "id": "20",
-          "name": "IClickable",
-          "type": "script"
-        },
-        {
-          "id": "12",
-          "name": "Menu",
-          "type": "script"
-        },
-        {
-          "id": "21",
-          "name": "ContinueButtonBehavior",
-          "type": "script"
-        },
-        {
-          "id": "13",
-          "name": "Menu2",
-          "type": "sprite"
-        }
-      ]
-    },
-    {
       "id": "7",
       "name": "Wolrd",
       "type": "script"
+    },
+    {
+      "id": "41",
+      "name": "text",
+      "type": "sprite"
+    },
+    {
+      "id": "40",
+      "name": "BackgroundTexture",
+      "type": "sprite"
     },
     {
       "id": "0",

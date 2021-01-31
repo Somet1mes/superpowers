@@ -11,6 +11,8 @@ class PhysicsBody2D {
   private mass: number;
   private frameRate = 60;
   isMoveable = true;
+  isLostPerson = false;
+  isPlayer = false;
   id: number;
   
   constructor(pos, mass, radius)
@@ -40,6 +42,11 @@ class PhysicsBody2D {
   GetMass(): number
   {
     return this.mass;
+  }
+  
+  SetMass(mass)
+  {
+    this.mass = mass;
   }
   
   GetRaduis(): number

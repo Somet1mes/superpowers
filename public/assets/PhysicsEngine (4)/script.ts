@@ -16,12 +16,15 @@ class PhysicsEngine {
   airResistance = 50; //kg m^-1
   maxRejectionVelocity = 0.1;
   
+  toBeRemoved = [];
+  
   constructor()
   {
     
   }
 
   update(physicsBodies: IWorldObject[]) {
+    this.toBeRemoved = [];
     for (var i = 0; i < physicsBodies.length; i++)
       {
         let body = physicsBodies[i].GetPhysicsBody2D();
@@ -36,6 +39,9 @@ class PhysicsEngine {
         
         body.update();
       }
+    
+    return this.toBeRemoved;
+
   }
   
   HandleCollisions(body: PhysicsBody2D, bodyIndex, physicsBodies: IWorldObject[])
@@ -60,6 +66,10 @@ class PhysicsEngine {
                   {
                     body.SetVelocity( ((body2.GetPosition().x - body.GetPosition().x)/distance * rejectionVelocity) + body.GetVelocity().x,
                       ((body2.GetPosition().y - body.GetPosition().y) / distance * rejectionVelocity));
+                  }
+                if (body2.isLostPerson && body.isPlayer)
+                  {
+                    this.toBeRemoved.push(i);
                   }
               }
           }

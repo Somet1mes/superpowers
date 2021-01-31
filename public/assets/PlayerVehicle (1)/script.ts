@@ -4,25 +4,30 @@ class PlayerVehicle implements IWorldObject {
   private actor: Sup.Actor;
   private physicsBody: PhysicsBody2D;
   private spriteRenderer: Sup.SpriteRenderer;
-  private maxPropellerForce: number;
-  private propellerForceIncrement: number;
+  maxPropellerForce: number; // N
+  propellerForceIncrement: number; // N/frame
   private drivingForce: Sup.Math.Vector2;
   private propellerForce: number = 0;
   private angle: number = 0;
-  private angleIncrement = 0.01; //radians per tick
+  angleIncrement = 0.01; //radians per tick
   private radius: number = 3;
-  private maxFuel: number = 500
+  maxFuel: number = 300
   private fuel: number = this.maxFuel; //Liters
-  private fuelConsumption: number = 1; // liters per kilo newton second
+  fuelConsumption: number = 1; // liters per kilo newton second
   private fuelActor: Sup.Actor = new Sup.Actor("fuelActor");
   private topHeight = 19;
   private powerBarActor: Sup.Actor = new Sup.Actor("powerBar");
+  private menuActor: Sup.Actor;
+  frameMass: number = 600;
   
-  constructor(cameraMan: Sup.Actor) {
+  constructor(cameraMan: Sup.Actor, menuActor: Sup.Actor) {
+    this.menuActor = menuActor;
+    
     this.actor = new Sup.Actor("PlayerVehicle");
     this.spriteRenderer = new Sup.SpriteRenderer(this.actor, "Helicopter/Helicopter1");
     this.actor.setPosition(0,0,0);
-    this.physicsBody = new PhysicsBody2D(new Sup.Math.Vector2(0,0), 1000, this.radius);
+    this.physicsBody = new PhysicsBody2D(new Sup.Math.Vector2(0,0), this.frameMass, this.radius);
+    this.physicsBody.isPlayer = true;
     
     this.maxPropellerForce = 12000;
     this.propellerForceIncrement =  this.maxPropellerForce / 200;
@@ -44,6 +49,7 @@ class PlayerVehicle implements IWorldObject {
     this.HandleUserInput();
     
     this.fuel -= this.fuelConsumption * 1/this.frameRate * Math.abs(this.propellerForce) / 1000;
+    this.physicsBody.SetMass(this.frameMass + this.fuel);
     if (this.fuel <= 0)
       {
         this.Reset();
@@ -55,9 +61,12 @@ class PlayerVehicle implements IWorldObject {
   
   Reset()
   {
-    this.physicsBody.SetPosition(0,0);
+    this.physicsBody.SetPosition(1,-142);
     this.physicsBody.SetVelocity(0,0);
+    this.angle = 0;
+    this.propellerForce = 0;
     this.fuel = this.maxFuel;
+    this.menuActor.setVisible(true);
   }
   
   HandleUserInput()
@@ -99,5 +108,10 @@ class PlayerVehicle implements IWorldObject {
   GetPosition()
   {
     return this.actor.getPosition();
+  }
+  
+  GetActor()
+  {
+    return this.actor;
   }
 }

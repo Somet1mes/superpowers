@@ -4,4 +4,6 @@ interface IWorldObject {
   
   update(): void;
   
+  GetActor(): Sup.Actor;
+  
 }

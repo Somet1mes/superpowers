@@ -6,7 +6,7 @@ class Terrain implements IWorldObject {
   
   constructor(x, y, radius) {
     this.actor = new Sup.Actor("terrainObject");
-    this.spriteRenderer = new Sup.SpriteRenderer(this.actor, "Ground1");
+    //this.spriteRenderer = new Sup.SpriteRenderer(this.actor, "Ground1");
     this.actor.setPosition(0,0,0);
     this.physicsBody = new PhysicsBody2D(new Sup.Math.Vector2(x,y), 1000000, radius);
     this.physicsBody.isMoveable = false;
@@ -20,6 +20,11 @@ class Terrain implements IWorldObject {
   GetPhysicsBody2D()
   {
     return this.physicsBody;
+  }
+  
+  GetActor()
+  {
+    return this.actor;
   }
 }
 
